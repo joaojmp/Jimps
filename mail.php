@@ -1,23 +1,20 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+require("PHPMailer/src/PHPMailer.php");
+require("PHPMailer/src/SMTP.php");
+require("PHPMailer/src/Exception.php");
 
-// require 'PHPMailer/src/PHPMailer.php';
-// require 'PHPMailer/src/SMTP.php';
-// require 'PHPMailer/src/Exception.php';
-
-$mail = new PHPMailer(true);
+$mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
 //Server settings
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+$mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
 $mail->isSMTP();
 $mail->Host       = 'smtp.kinghost.net';
 $mail->CharSet    = 'UTF-8';
 $mail->SMTPAuth   = true;
 $mail->Username   = 'jimps@jimps.com.br';
 $mail->Password   = '6nWdVE1PtTnD';
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port       = 587;
 
 //Recipients
