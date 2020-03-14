@@ -13,7 +13,7 @@ $mail->Host       = 'smtp.kinghost.net';
 $mail->CharSet    = 'UTF-8';
 $mail->SMTPAuth   = true;
 $mail->Username   = 'jimps@jimps.com.br';
-$mail->Password   = '6nWdVE1PtTnD';
+$mail->Password   = 'feD5qElMykcV';
 $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port       = 587;
 
@@ -35,5 +35,10 @@ $mail->Body    .= '<hr>';
 $mail->Body    .= '<strong>Mensagem:</strong> <span style="text-align: justify">' . $_POST['message'] . '</span>.';
 $mail->Body    .= '<hr>';
 $mail->send();
+
+echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Enviado com Sucesso, Entraremos em contato assim que possível!!!');
+    window.location.href='index.html';
+    </script>");
 
 ?>
