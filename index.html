@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="fonts/fontawesome-free-5.12.1-web/css/all.css">
+        <link rel="icon" href="imgs/favicon.png" />
+        <title>Jimp's - Home</title>
+    </head>
+    <body>
+        <div class="principal-div">
+            <div class="menu-div">
+                <ul>
+                    <li><a href="#home" id="linkHome"><i class="fas fa-home"></i>&nbsp; Home</a></li>
+                    <li><a href="#portfolio" id="linkPortfolio"><i class="fas fa-images"></i>&nbsp; Portfólio</a></li>
+                    <li><a href="#contato" id="linkContato"><i class="fas fa-phone"></i>&nbsp; Contato</a></li>
+                </ul>
+            </div>
+            <div class="body-div">
+                <div class="container">
+                    <div id="home">
+                        <img src="../imgs/background.jpg">
+                        <p>Nós Amamos Programar Websites</p>
+                    </div>
+                    <hr>
+                    <div id="portfolio">
+                        <p>Alguns de nossos Trabalhos:</p>
+                        <img src="../imgs/trabalhos.png">
+                    </div>
+                    <hr>
+                    <div id="contato">
+                        <h1>Contato:</h1>
+                        <form action="mail.php" method="POST">
+                            <div class="div-input">
+                                <label for="name">Nome:</label>
+                                <input type="text" name="name" id="name" class="input" required>
+                            </div>
+                            <div class="div-input">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" class="input" required>
+                            </div>
+                            <div class="div-input">
+                                <label for="phone">Telefone:</label>
+                                <input type="text" name="phone" id="phone" class="input" required>
+                            </div>
+                            <div class="div-input">
+                                <label for="subject">Assunto:</label>
+                                <input type="text" name="subject" id="subject" class="input" required>
+                            </div>
+                            <div class="div-input">
+                                <label for="Message">Mensagem:</label>
+                                <textarea name="Message" id="Message" class="input" rows="10" required></textarea>
+                            </div>
+                            <div class="div-btn">
+                                <button type="submit" class="btn">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footbar">
+                        Copyright © Aplaca 2020 - By Jimp
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="fonts/fontawesome-free-5.12.1-web/js/all.js"></script>
+<script>
+    $(window).ready(function() {
+        $('.container div').mouseover(function() {
+            if ($(this).attr('id') == 'home') {
+                $('#linkHome').addClass('active');
+                $('#linkPortfolio').removeClass('active');
+                $('#linkContato').removeClass('active');
+            }
+
+            if ($(this).attr('id') == 'portfolio') {
+                $('#linkHome').removeClass('active');
+                $('#linkPortfolio').addClass('active');
+                $('#linkContato').removeClass('active');
+            }
+
+            if ($(this).attr('id') == 'contato') {
+                $('#linkHome').removeClass('active');
+                $('#linkPortfolio').removeClass('active');
+                $('#linkContato').addClass('active');
+            }
+        });
+
+        $('.menu-div ul li a').click(function() {
+            if ($(this).attr('id') == 'linkHome') {
+                $('#linkHome').addClass('active');
+                $('#linkPortfolio').removeClass('active');
+                $('#linkContato').removeClass('active');
+            }
+
+            if ($(this).attr('id') == 'linkPortfolio') {
+                $('#linkHome').removeClass('active');
+                $('#linkPortfolio').addClass('active');
+                $('#linkContato').removeClass('active');
+            }
+
+            if ($(this).attr('id') == 'linkContato') {
+                $('#linkHome').removeClass('active');
+                $('#linkPortfolio').removeClass('active');
+                $('#linkContato').addClass('active');
+            }
+        });
+    });
+</script>
