@@ -1,16 +1,8 @@
 <?php
 
-/* Exception class. */
-
-use PHPMailer\PHPMailer\PHPMailer;
-
-require 'phpmailer\src\Exception.php';
-
-/* The main PHPMailer class. */
-require 'phpmailer\src\PHPMailer.php';
-
-/* SMTP class, needed if you want to use SMTP. */
-require 'phpmailer\src\SMTP.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
 
 $mail = new PHPMailer(true);
 
