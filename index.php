@@ -18,6 +18,7 @@
                         <a href="#home" id="linkHome" class="list-group-item list-group-item-action bg-light text-light"><i class="fas fa-home"></i>&nbsp; Home</a>
                         <a href="#portfolio" id="linkPortfolio" class="list-group-item list-group-item-action bg-light"><i class="fas fa-images"></i>&nbsp; Portfólio</a>
                         <a href="#contato" id="linkContato" class="list-group-item list-group-item-action bg-light"><i class="fas fa-phone"></i>&nbsp; Contato</a>
+                        <a href="https://github.com/joaojmp" target="_blank" class="list-group-item list-group-item-action bg-light"><i class="fab fa-git-alt"></i>&nbsp; Github</a>
                     </div>
                 </div>
             </div>
