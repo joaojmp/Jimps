@@ -1,3 +1,9 @@
+@import 'bootstrap.min.css';
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -7,166 +13,44 @@ body {
     font-family: Didot;
 }
 
-hr {
-    border: 2px solid rgb(102, 44, 44);
+@media screen and (min-width: 1000px) {
+    .centered {
+        font-size: 300%;
+    }
 }
 
-.principal-div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+@media screen and (min-width: 510px) and (max-width: 1000px) {
+    .centered {
+        font-size: 200%;
+    }
 }
 
-.menu-div {
-    width: 25%;
-    height: 100%;
-    float: left;
-    position: relative;
-    font-weight: bold;
-    background: rgb(102, 44, 44);
-    -webkit-box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
-    box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
+@media screen and (max-width: 510px) {
+    .centered {
+        font-size: 100%;
+    }
 }
 
-.menu-div ul {
-    list-style: none;
-    margin-top: 50%;
-    padding: 0;
-}
-
-.menu-div ul li {
-    text-align: center;
-    padding: 10% 10% 10% 10%;
-}
-
-.menu-div ul li a {
-    color: rgb(145, 106, 106);
-    text-decoration: none;
-}
-
-.menu-div ul li a:hover {
-    color: white;
-}
-
-.active {
-    color: white !important;
-}
-
-.body-div {
-    width: 75%;
-    height: 100%;
-    float: left;
-    position: relative;
-    overflow-y: scroll;
-}
-
-.body-div .container {
-    height: 100%;
-    color: white;
-}
-
-#home {
-    margin: 3%;
-    height: 100%;
-}
-
-#home img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-#home p {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 40%;
-    color: white;
-    text-shadow: 0px 0px 5px #000000;
-    font-size: 300%;
-    text-align: center;
-}
-
-#portfolio {
-    margin: 3%;
-    height: 100%;
-}
-
-#portfolio img {
-    width: 100%;
-    border-radius: 10px;
-    border: 5px solid rgb(102, 44, 44);
-    height: 90%;
-}
-
-#portfolio p {
-    left: 0;
-    right: 0;
-    top: 40%;
-    color: white;
-    text-shadow: 0px 0px 5px #000000;
-    font-size: 150%;
-    text-align: center;
-}
-
-.portfolio-imgs {
-    width: 100%;
-}
-
-.portfolio-imgs div {
+.cursor-pointer {
     cursor: pointer;
-    width: 18%;
-    padding: 1%;
-    float: left;
 }
 
-#contato {
-    margin: 3%;
-    height: 100%;
+.menu-toggle {
+    color: #d17c7c;
 }
 
-.footbar {
-    position: relative;
-    width: 100%;
-    font-size: 80%;
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: white;
-    background: rgb(102, 44, 44);
-}
-
-.div-input {
-    padding: 1%;
-    width: 98%;
-}
-
-.div-btn {
-    text-align: right;
-    padding: 1%;
-    width: 99%;
-}
-
-.input {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 7px;
-}
-
-.btn {
-    cursor: pointer;
-    padding: 5px 15px 5px 15px;
-    color: white;
-    border: 0;
-    background: rgb(109, 23, 23);
-    border-radius: 5px;
-}
-
-.btn:hover {
+.menu-toggle:hover {
     color: rgb(255, 255, 255);
-    background: rgb(88, 4, 4);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 5px #000000;
 }
 
 ::-webkit-scrollbar {
@@ -183,4 +67,99 @@ hr {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(92, 39, 39);
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgb(102, 44, 44) !important;
+    border-left: 1px solid rgb(92, 39, 39);
+}
+
+#sidebar-wrapper {
+    width: 15rem;
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    background: rgb(102, 44, 44);
+    -webkit-box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
+    box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.15rem;
+    font-size: 1.2rem;
+    color: white;
+    border-bottom: 1px solid rgb(92, 39, 39);
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group a:first-child {
+    margin-top: 60%;
+}
+
+#sidebar-wrapper .list-group a {
+    width: 15rem;
+    text-align: center;
+    margin: 30px 0 30px 0;
+    color: rgb(145, 106, 106);
+    border: 0;
+    background: transparent !important;
+}
+
+#sidebar-wrapper .list-group a:hover {
+    color: white;
+}
+
+#page-content-wrapper {
+    position: relative;
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+#bigImage img {
+    border: 5px solid rgb(102, 44, 44) !important;
+}
+
+#portfolio-imgs div {
+    border: 3px solid rgb(102, 44, 44) !important;
+}
+
+#portfolio-imgs div:hover {
+    border: 3px solid rgb(77, 33, 33) !important;
+    -webkit-box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
+    box-shadow: 6px 0px 29px 6px rgba(0,0,0,0.75);
 }
