@@ -13,6 +13,15 @@ body {
     font-family: Didot;
 }
 
+.link {
+    color: rgb(255, 255, 255);
+    text-decoration: none !important;
+}
+
+.link:hover {
+    color: rgb(17, 17, 17);
+}
+
 @media screen and (min-width: 1000px) {
     .centered {
         font-size: 300%;
