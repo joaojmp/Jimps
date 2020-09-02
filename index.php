@@ -87,7 +87,7 @@
                 </div>
                 <hr>
                 <div class="container-fluid mt-2 position-relative d-inline-block divs" id="contato">
-                    <form action="mail.php" method="POST">
+                    <form action="mail.php" id="form" method="POST">
                         <div class="row text-light">
                             <div class="col-sm-12">
                                 <label for="name">Nome:</label>
@@ -114,7 +114,7 @@
                                 <div class="g-recaptcha" data-sitekey="6LfX6sYZAAAAAPwpIC2vCkO7dOPFrwsh7FxgZiYp"></div>
                             </div>
                             <div class="col-sm-12 text-right mt-4">
-                                <button type="submit" class="btn btn-sm btn-success">Enviar</button>
+                                <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -132,9 +132,13 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="fonts/fontawesome-free-5.12.1-web/js/all.js"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
     $(window).ready(function() {
+        function onSubmit(token) {
+            document.getElementById("form").submit();
+        }
+
         $('.divs').hover(function() {
             if ($(this).attr('id') == 'home') {
                 $('#linkHome').addClass('text-light');
