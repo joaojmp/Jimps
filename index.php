@@ -114,7 +114,7 @@
                                 <div class="g-recaptcha" data-sitekey="6LcF78YZAAAAAPwlwzjDzMGLVSXJAb_6eoCPjERB"></div>
                             </div>
                             <div class="col-sm-12 text-right mt-4">
-                                <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Enviar</button>
+                                <button type="submit" class="btn btn-success">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -135,10 +135,6 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
     $(window).ready(function() {
-        function onSubmit(token) {
-            document.getElementById("form").submit();
-        }
-
         $('.divs').hover(function() {
             if ($(this).attr('id') == 'home') {
                 $('#linkHome').addClass('text-light');
