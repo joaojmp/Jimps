@@ -106,8 +106,8 @@
                                 <input type="text" name="subject" id="subject" class="form-control form-control-sm" required>
                             </div>
                             <div class="col-sm-12 mt-3">
-                                <label for="Message">Mensagem:</label>
-                                <textarea name="Message" id="Message" class="form-control form-control-sm" rows="7" required></textarea>
+                                <label for="message">Mensagem:</label>
+                                <textarea name="message" id="message" class="form-control form-control-sm" rows="7" required></textarea>
                             </div>
                             <div class="col-sm-12 text-right">
                                 <label class="invisible"></label>
