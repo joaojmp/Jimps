@@ -109,6 +109,10 @@
                                 <label for="Message">Mensagem:</label>
                                 <textarea name="Message" id="Message" class="form-control form-control-sm" rows="7" required></textarea>
                             </div>
+                            <div class="col-sm-12 text-right">
+                                <label class="invisible"></label>
+                                <div class="g-recaptcha" data-sitekey="6LfX6sYZAAAAAPwpIC2vCkO7dOPFrwsh7FxgZiYp"></div>
+                            </div>
                             <div class="col-sm-12 text-right mt-4">
                                 <button type="submit" class="btn btn-sm btn-success">Enviar</button>
                             </div>
@@ -128,6 +132,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="fonts/fontawesome-free-5.12.1-web/js/all.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script>
     $(window).ready(function() {
         $('.divs').hover(function() {
@@ -179,5 +184,11 @@
             var src = $(this).attr('src');
             $('#bigImage img').attr('src', src);
         });
+
+        if (window.innerWidth < 768) {
+            $(".navbar").hide();
+        } else {
+            $(".navbar").show();
+        }
     });
 </script>
