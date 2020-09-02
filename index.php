@@ -111,7 +111,7 @@
                             </div>
                             <div class="col-sm-12 text-right">
                                 <label class="invisible"></label>
-                                <div class="g-recaptcha" data-sitekey="6LfX6sYZAAAAAPwpIC2vCkO7dOPFrwsh7FxgZiYp"></div>
+                                <div class="g-recaptcha" data-sitekey="6LcF78YZAAAAAPwlwzjDzMGLVSXJAb_6eoCPjERB"></div>
                             </div>
                             <div class="col-sm-12 text-right mt-4">
                                 <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Enviar</button>
